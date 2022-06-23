@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 3%;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Ejercicio 3
+    </h1>
+    <hr>
+    <p>Diseñar una clase que pida por teclado dos números enteros y muestre su suma, resta, multiplicación, división y el resto de la división. Si la operación no es conmutativa, también se mostrará el resultado invirtiendo los operadores.
+    </p>
+
+    <form action="">
+
+        <label for="number"> introduce num1</label>
+        <input type="number" name="" id="num1"><br><br>
+
+        <label for="number"> introduce num2</label>
+        <input type="number" name="" id="num2"><br><br>
+
+        <input type="button" value="Enviar" onclick="ejercicio3()">
+        <br><br>
+
+    </form>
+
+    <div id="respuesta"> </div>
+
+    <script>
+
+        function ejercicio3() {
+
+            var num1 = parseInt(document.getElementById("num1").value);
+
+            var num2 = parseInt(document.getElementById("num2").value);
+
+            document.getElementById("respuesta").innerHTML = ` <p><h2>La suma de los elementos es ${num1+num2}</h2></p><p><h2>La resta de los elementos es ${num1-num2}</h2></p><p><h2>La multiplicación de los elementos es ${num1*num2}</h2></p><p><h2>La división de los elementos es ${num1/num2}</h2></p>`;
+        }
+
+    </script>
+</body>
+</html>

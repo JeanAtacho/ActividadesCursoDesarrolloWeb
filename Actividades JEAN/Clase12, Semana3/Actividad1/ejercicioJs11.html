@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+   
+   alert("A continuación te diré el valor de tu IMC.");
+     
+    var peso = prompt("Introducir Peso en Kilogramos (Kg)");
+    var altura = prompt("Introducir altura en Metros (m)");
+            
+    var imc = peso / (altura*altura);
+    alert (imc);
+
+            if (imc <16){
+                alert("Criterio de Ingreso en Hospital");
+            }
+            if (imc >=16 && imc <=17){
+                alert("Infra-Peso");
+            }
+            if (imc >17 && imc <=18){
+                alert("Bajo-Peso");
+            }
+            if (imc >18 && imc <=25){
+                alert("Peso Normal (Saludable)");
+            }
+            if (imc >25 && imc <=30){
+                alert("Sobre Peso (Obecidad de grado I)");
+            }
+            if (imc >30 && imc <=35){
+                alert("Sobre Peso Crónico (Obecidad de grado II)");
+            }
+            if (imc >35 && imc <=40){
+                alert("Obesidad Pre-Mórbida (Obecidad de grado III)");
+            }
+            if (imc >40){
+                alert("Obesidad Mórbida (Obecidad de grado IV)");
+            }
+
+    </script>
+</body>
+</html>

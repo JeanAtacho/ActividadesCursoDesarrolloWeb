@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 3%;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Ejercicio 1
+    </h1>
+    <hr>
+    <p>Diseñar una funcion que lea el valor correspondiente a una distancia en millas marinas y las escriba expresadas en metros. Sabiendo que 1 milla marina equivale a 1852 metros.
+    </p>
+
+    <form action="">
+
+        <label for="number"> introduce valor en millas nauticas</label>
+        <input type="number" name="" id="number">
+
+        <input type="button" value="Enviar" onclick="ejercicio1()">
+
+    </form>
+
+    <div id="respuesta"> </div>
+
+    <script>
+        var nombre = "pepe";
+
+        function ejercicio1() {
+
+            var millasNauticas = document.getElementById("number").value;
+
+            var respuesta = millasNauticas * 1852;
+
+            console.log(respuesta);
+
+            document.getElementById("respuesta").innerHTML = ` <h2>El resultado de la operacion es ${respuesta}</h2> `;
+        }
+    </script>
+</body>
+</html>

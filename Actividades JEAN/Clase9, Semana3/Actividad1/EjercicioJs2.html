@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 3%;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Ejercicio 2
+    </h1>
+    <hr>
+    <p>Diseñar una clase que describe el porcentaje descontado en una compra, introduciendo por teclado el precio de la tarífa y el precio pagado.
+    </p>
+
+    <form action="">
+
+        <label for="number"> introduce el precio de la tarifa</label>
+        <input type="number" name="" id="num1"><br><br>
+
+        <label for="number"> introduce precio pagado</label>
+        <input type="number" name="" id="num2"><br><br>
+
+        <input type="button" value="Enviar" onclick="ejercicio2()">
+        <br><br>
+
+    </form>
+
+    <div id="respuesta"> </div>
+
+    <script>
+
+        function ejercicio2() {
+
+            var num1 = parseInt(document.getElementById("num1").value);
+
+            var num2 = parseInt(document.getElementById("num2").value);
+
+            var respuesta = (num1-num2)
+
+            
+            document.getElementById("respuesta").innerHTML = ` <p><h2>El total del descuento es de ${respuesta}%.</h2></p>`;
+        }
+
+    </script>
+</body>
+</html>

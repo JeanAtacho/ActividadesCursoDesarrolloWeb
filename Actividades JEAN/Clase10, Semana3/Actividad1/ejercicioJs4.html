@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 3%;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Ejercicio 4
+    </h1>
+    <hr>
+    <p>Diseñar una clase que exprese en horas, minutos y segundos un tiempo expresado en segundos.
+    </p>
+
+    <form action="">
+
+        <label for="number"> introduce un tiempo en segundos</label>
+        <input type="number" name="" id="num1"><br><br>
+
+        <input type="button" value="Enviar" onclick="ejercicio4()">
+        <br><br>
+
+    </form>
+
+    <div id="respuesta"> </div>
+
+    <script>
+        function ejercicio4() {
+
+            var segundos
+            var segundos = parseInt(document.getElementById('segudos').value);
+
+            var horas = parseInt(segundos / 3600);
+
+            var resto = segundos % 3600;
+
+            var minutos = resto / 60; seg1 = resto % 60;
+            
+            document.getElementById("respuesta").innerHTML = `
+
+
+
+    </script>
+</body>
+</html>
