@@ -13,38 +13,101 @@
 
     <style media="screen">
 /* Esto son los estilos para la barra de menú o navegación */
-* {
-  padding: 0;
-  margin: 0;
+
+.myPage{
+  width: 100%;
+  height: 590px;
+  background-size: cover;
+  background-image: url("/Recursos/bacground_spa_relax.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'open sans';
 }
-p {
-  margin-bottom: 20px;
+
+/* Nav button */
+.navMenu{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 30px;
+  right: 30px;
+  font-size: 50px;
+  font-weight: 500;
+  cursor: pointer;
 }
-header {
-  background: #b47705a8;
+
+/* overlay (background) */
+.overlay{
+  height: 0%;
   width: 100%;
   position: fixed;
-  z-index: 10;
-  padding-left: 10px;
+  z-index: 9999999;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.801);
+  background-color: rgba(0, 0, 0, 0.801);
+  overflow-y: hidden;
+  transform: 0.5s;
+}  /* Hight and Width depends on how you want to reveal the overlay ( see Js code ) */
+
+/* Close Button */
+.closebtn{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: rgb(255,255,255);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 60px;
 }
-nav ul {
-  list-style: none;
-  overflow: hidden; /* Limpiamos errores de float */
+
+/* Position the content inside the overlay */
+.overlay-content{
+  position: relative;
+  top: 15%;
+  margin: 20px;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
 }
-nav ul li {
-  float: left;
-  font-family: fantasy;
-  font-size: 20px;
+.overlay-content li{
+  margin: 7px;
+  padding: 10px;
 }
-nav ul li a {
-  display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-  padding: 20px 40px;
+.overlay-content li a{
   color: #fff;
+  font-size: 30px;
+  font-family: sans-serif;
+  margin: 30px;
+  font-weight: bold;
   text-decoration: none;
 }
-nav ul li:hover {
+
+/* Menu Hover Effect */
+
+.overlay-content a:hover,
+.overlay-content a:focus{
+  color: white;
   background: #0dc2b9;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
 }
+
+
+
+/* a continuacion lo estilos para el contenidor*/
+
 .contenido {
   padding-top: 140px;
   padding-left: 20px;
@@ -54,18 +117,8 @@ nav ul li:hover {
   background-color: rgba(134, 180, 180, 0.308);
   position: absolute;
 }
-.imagen_dinamica_principal {
-position: relative;
-}
-body {
-  height: 550px;
-  background-image: url("/Actividad2/Recursos/bacground_spa_relax.gif");
-background-size: cover;
-  background-repeat:no-repeat;
-  background-position: center center;
-}
-/* a continuacion se colocaran los estilos del footer*/
 
+/* a continuacion se colocaran los estilos del footer*/
           *{
         margin: 0;
         padding: 0;
@@ -79,8 +132,7 @@ background-size: cover;
         background: #0dc2b977;
         height: auto;
         width: 100vw;
-    
-        padding-top: 40px;
+        padding-top: 10px;
         color: #fff;
     }
     .footer-content{
@@ -183,17 +235,28 @@ background-size: cover;
 <body>
   
     <header>
-    <div>
-            <nav>
-                <ul>
-                    <li><img src="./Recursos/logo_spa_relax.png" width="60px" height="60px" title="Logo"></li>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Tarifas</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div id="myNav" class="overlay">
+
+
+<!--overlay close button-->
+<a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+
+<!--overlay content -->
+<div class="overlay-content">
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Tarifas</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+</div>
+</div>
+
+<!--overlay Open button-->
+<div class="navMenu" onclick="openNav()">&#9776; </div>
+<div class="myPage">
+
+</div>
     </header>  
 
 
@@ -202,8 +265,6 @@ background-size: cover;
 
     <footer>
       <div class="footer-content">
-          <h2>SPA RELAX</h2>
-          <p><h4>"No escatimes en cuidado para tu cuerpo, es el único lugar donde vives"</h4></p>
           <h3><p>SIGUE NUESTRAS REDES SOCIALES</p></h3>
           <ul class="socials">
               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -220,7 +281,7 @@ background-size: cover;
                       <li><a href="">Inicio</a></li>
                       <li><a href="">Servicios</a></li>
                       <li><a href="">Tarifas</a></li>
-                      <li><a href="">Contacto/a></li>
+                      <li><a href="">Contacto</a></li>
                     </ul>
                   </div>
         </div>
@@ -241,7 +302,19 @@ background-size: cover;
         window.alert('Lo sentimos, solo si eres mayor de 18 años, podrás acceder a nuestra página web.');
         location.replace('https://www.despedidasbig.com/blog/wp-content/uploads/2021/04/despedidas-divertidas-en-madrid.jpg')
     }
+
+  
+
+        function openNav(){
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav(){
+            document.getElementById("myNav").style.height = "0%";
+        }
     </script>
+
+    
 
 </body>
 </html>
