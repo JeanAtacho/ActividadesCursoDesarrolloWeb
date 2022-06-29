@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #e9ecf4;
+    color: #000;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+.contenedor {
+    width: 90%;
+    margin: 0px auto;
+    background-color: rgb(41, 43, 160);
+    padding: 10px;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-areas: 
+    "header header header" 
+    "main main menu" 
+    "right right menu" 
+    "opinion" "opinion"
+    "footer footer footer";
+}
+
+.contenedor .header,
+.contenedor .main,
+.contenedor .right,
+.contenedor .menu,
+.contenedor .opinion,
+.contenedor .opinion,
+.contenedor .opinion,
+.contenedor .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.contenedor .header {
+            background: #5eb2eb;
+            color: black;
+            grid-area: header;
+        }
+.contenedor .main {
+            background: #5eb2eb;
+            color: black;
+            grid-area: main;
+        }
+.contenedor .right {
+            background: #5eb2eb;
+            color: black;
+            grid-area: right;    
+        }
+.contenedor .menu {
+            background: #5eb2eb;
+            color: black;
+            grid-area: menu;
+        }
+.contenedor .opinion {
+            background: #5eb2eb;
+            color: black;
+            grid-area: menu;
+        }
+.contenedor .opinion {
+            background: #5eb2eb;
+            color: black;
+            grid-area: menu;
+        }
+.contenedor .opinion {
+            background: #5eb2eb;
+            color: black;
+            grid-area: menu;
+        }
+.contenedor .footer {
+            background: #5eb2eb;
+            color: black;
+            grid-area: footer;
+        }
+
+@media (max-width: 768px) {
+    .contenedor {
+    grid-template-areas: 
+    "header" "main" "rigt" "menu" "option" "footer";
+    }
+
+    /*Siempre que deseamos ocultar un item para la vista mas reducida, lo debemos eliminar del .contenedor y solo debemos señalar el item como se hace a continuación*/
+} 

@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #e9ecf4;
+    color: #000;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+.contenedor {
+    width: 90%;
+    margin: 0px auto;
+    background-color: rgb(160, 41, 41);
+    padding: 10px;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-areas: 
+    "header header header" 
+    "menu main right" 
+    "menu footer footer";
+}
+
+.contenedor .header,
+.contenedor .menu,
+.contenedor .main,
+.contenedor .right,
+.contenedor .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.contenedor .header {
+            background: #df9292;
+            color: black;
+            grid-area: header;
+        }
+.contenedor .menu {
+            background: #df9292;
+            color: black;
+            grid-area: menu;
+        }
+.contenedor .main {
+            background: #df9292;
+            color: black;
+            grid-area: main;
+        }
+.contenedor .right {
+            background: #df9292;
+            color: black;
+            grid-area: right;    
+        }
+.contenedor .footer {
+            background: #df9292;
+            color: black;
+            grid-area: footer;
+        }
+
+@media (max-width: 768px) {
+    .contenedor {
+    grid-template-areas: 
+    "header" "menu" "main" "footer";
+    }
+
+    /*Siempre que deseamos ocultar un item para la vista mas reducida, lo debemos eliminar del .contenedor y solo debemos señalar el item como se hace a continuación*/
+
+    .right {
+        display: none;
+    }
+} 
