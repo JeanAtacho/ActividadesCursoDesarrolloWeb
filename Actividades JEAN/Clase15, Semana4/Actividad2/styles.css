@@ -15,25 +15,21 @@ body {
     grid-gap: 10px;
     display: grid;
     grid-template-areas: 
-    "header header header" 
-    "main main menu" 
-    "right right menu" 
-    "opinion" "opinion"
-    "footer footer footer";
+    'header header header' 'main main menu' 'right right menu' 'opinion1 opinion2 opinion3' 'footer footer footer';
 }
 
 .contenedor .header,
 .contenedor .main,
 .contenedor .right,
 .contenedor .menu,
-.contenedor .opinion,
-.contenedor .opinion,
-.contenedor .opinion,
+.contenedor .opinion1,
+.contenedor .opinion2,
+.contenedor .opinion3,
 .contenedor .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 20px;
 }
 
 .contenedor .header {
@@ -56,20 +52,20 @@ body {
             color: black;
             grid-area: menu;
         }
-.contenedor .opinion {
+.contenedor .opinion1 {
             background: #5eb2eb;
             color: black;
-            grid-area: menu;
+            grid-area: opinion1;
         }
-.contenedor .opinion {
+.contenedor .opinion2 {
             background: #5eb2eb;
             color: black;
-            grid-area: menu;
+            grid-area: opinion2;
         }
-.contenedor .opinion {
+.contenedor .opinion3 {
             background: #5eb2eb;
             color: black;
-            grid-area: menu;
+            grid-area: opinion3;
         }
 .contenedor .footer {
             background: #5eb2eb;
@@ -80,7 +76,7 @@ body {
 @media (max-width: 768px) {
     .contenedor {
     grid-template-areas: 
-    "header" "main" "rigt" "menu" "option" "footer";
+    'header header header' 'main main main' 'right right right''menu menu menu' 'opinion1 opinion2 opinion3 ' 'footer footer footer';
     }
 
     /*Siempre que deseamos ocultar un item para la vista mas reducida, lo debemos eliminar del .contenedor y solo debemos señalar el item como se hace a continuación*/

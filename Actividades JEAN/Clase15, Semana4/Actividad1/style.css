@@ -60,7 +60,10 @@ body {
 @media (max-width: 768px) {
     .contenedor {
     grid-template-areas: 
-    "header" "menu" "main" "footer";
+    "header" 
+    "menu" 
+    "main" 
+    "footer";
     }
 
     /*Siempre que deseamos ocultar un item para la vista mas reducida, lo debemos eliminar del .contenedor y solo debemos señalar el item como se hace a continuación*/
@@ -68,4 +71,5 @@ body {
     .right {
         display: none;
     }
+    
 } 
