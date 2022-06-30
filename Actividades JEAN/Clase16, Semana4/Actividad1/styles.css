@@ -1,0 +1,103 @@
+:root {
+    --colorFondo: hsl(216, 75%, 51%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.containerSuperior .anuncio {
+    background-color: rgb(233, 240, 247);
+    padding: 2em;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.btn:hover {
+    color: black;
+    background-color: aliceblue;
+}
+
+.btn {
+    margin-top: 2em;
+    padding: 1rem;
+    margin: 1.5em;
+    border-radius: 0.5rem;
+    color: aliceblue;
+    border-color: hsl(216, 75%, 51%);
+    background-color: rgb(3, 6, 54);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+.containerSuperior {
+    min-height: 40vh;
+    background-color: var(--colorFondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerInferior {
+    display: grid;
+    grid-template-areas: "elemento1 elemento2 elemento3";
+    gap: 20px;
+    background-color: rgb(243, 243, 213);
+    padding: 4em;
+}
+
+.containerInferior .elemento1,
+.containerInferior .elemento2,
+.containerInferior .elemento3 {
+    background-color: rgb(48, 53, 48);
+    width: 300px;
+    color: white;
+    min-height: 200px;
+    /*alineartextoalamitar*/
+    border-radius: 1em;
+}
+
+.fotosElementos {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    -webkit-border-radius: 1rem 1rem 0 0;
+    -moz-border-radius: 1rem 1rem 0 0;
+    -ms-border-radius: 1rem 1rem 0 0;
+    -o-border-radius: 1rem 1rem 0 0;
+}
+
+.containerInferior .elemento1 {
+    grid-area: elemento1;
+}
+
+.containerInferior .elemento2 {
+    grid-area: elemento2;
+}
+
+.containerInferior .elemento3 {
+    grid-area: elemento3;
+}
+
+@media (max-width: 768px) {
+    .containerInferior {
+        grid-template-areas: 'elemento1' 'elemento2' 'elemento3';
+        padding: 1em 1em;
+    }
+    .containerInferior .elemento1,
+    .containerInferior .elemento2,
+    .containerInferior .elemento3 {
+        width: 100%;
+    }
+}
