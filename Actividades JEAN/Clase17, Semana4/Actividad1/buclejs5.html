@@ -7,10 +7,38 @@
     <title>Document</title>
 </head>
 <body>
+    
+    <button onclick="hastaQueYoDiga()">Resultado</button>
+    <button onclick="borrar()">borrar</button>
+    
+    <div id="resul"></div>
+
     <script>
         //Enunciado: contar hasta que yo diga. (intoducir función de bucle por prompt)
         //imput type ="botton"
         //onclick = "contar 1100"
+
+    function hastaQueYoDiga(){
+    var x = 0;
+    var final = prompt ("¿hasta cuantos?")
+    var Resultado = ""
+    
+        while (x <= final) {
+        Resultado = Resultado + x + ' '
+            
+        x++;
+        }
+
+    document.getElementById("resul").innerHTML=Resultado;
+    }
+
+    function borrar(){
+        
+    document.getElementById("resul").innerHTML= ' ';
+    }
+
+
     </script>
+
 </body>
 </html>
