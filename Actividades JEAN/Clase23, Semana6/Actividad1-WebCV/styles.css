@@ -1,16 +1,7 @@
 /* Esto son los estilos para la barra de menú o navegación */
-
-.myPage{
-  width: 100%;
-  height: 590px;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  font-family: 'open sans';
+*{
+  padding: 0;
+  margin: 0;
 }
 
 /* Nav button */
@@ -62,6 +53,7 @@
 .overlay-content li{
   margin: 7px;
   padding: 10px;
+  list-style: none; 
 }
 .overlay-content li a{
   color: #fff;
@@ -98,4 +90,71 @@
   justify-content: safe;
   background-color: rgb(5, 5, 5);
   position: absolute;
+}
+
+/* estilo para los boton de HireMe*/
+.button_index{
+  width: 175px;
+  height: 65px;
+  border-radius: 15px;
+  border-color:aqua;
+  border-style: hidden;
+  font-size: 40px;
+  background-color: #4b4545;
+  color: aqua;
+}
+
+/* estilo para el texto del index*/
+.p_index{
+  position: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 60px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.index{
+  width: 100%;
+  height:100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'open sans';
+  background-image: url('imagenes/Imagen de fondo webcv.jpg');
+}
+
+.about{
+
+  margin-top: 80px;
+  margin-left: 20px;
+  margin-right: 10px;
+  width: 40%;
+  height:100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: top;
+  flex-direction:column;
+  font-family: 'open sans';
+  background-color: white;
+  text-align: justify;
+  font-size: 25px;
+  font-family:inherit;
+}
+
+/* estilo para los botones de descarga*/
+.button_download{
+  width: 180px;
+  border-radius: 15px;
+  border-color:aqua;
+  border-style: hidden;
+  font-size: 25px;
+  background-color: #4b4545;
+  color: aqua;
+  position: left;
 }
