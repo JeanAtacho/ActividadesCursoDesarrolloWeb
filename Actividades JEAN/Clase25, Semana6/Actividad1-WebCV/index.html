@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>WebCV</title>
+
+</head>
+
+<body>
+    
+    <header>
+        <div id="myNav" class="overlay">
+            <!--overlay close button-->
+            <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+            <!--overlay content -->
+            <div class="overlay-content">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+            <!--overlay Open button-->
+        <div class="navMenu" onclick="openNav()">&#9776; </div>
+    </header>  
+    
+    <div class="index">
+        <center>
+        <p class="p_index">Welcome <br> I´m Jean Atacho <br> A freelancer web developer</p> <br><br>
+        <button class="buttons">Hire Me</button>
+        </center>
+
+    </div>
+ 
+
+
+
+
+
+
+
+
+
+<script>
+ 
+ // barra de menu //
+ function openNav(){
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+function closeNav(){
+            document.getElementById("myNav").style.height = "0%";
+        }
+</script>
+</body>
+</html>
