@@ -10,7 +10,7 @@
   top: 15px;
   right: 23px;
   cursor: pointer;
-  color: rgb(47, 235, 235);
+  color: #07F1F1;
   text-decoration: none;
   font-weight: bold;
   font-size: 55px;
@@ -35,7 +35,7 @@
   position: absolute;
   top: 10px;
   right: 25px;
-  color: rgb(47, 235, 235);
+  color: #07F1F1;
   text-decoration: none;
   font-weight: bold;
   font-size: 80px;
@@ -56,7 +56,7 @@
   list-style: none; 
 }
 .overlay-content li a{
-  color: #fff;
+  color: white;
   font-size: 30px;
   font-family: sans-serif;
   margin: 30px;
@@ -68,7 +68,7 @@
 .overlay-content a:hover,
 .overlay-content a:focus{
   color: white;
-  background: #0dc2b9;
+  background: #07F1F1;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   transform: translateX(-98%) translateY(-25%) rotate(45deg);
@@ -80,7 +80,7 @@
   border-radius: 5px;
 }
 
-/* a continuacion lo estilos para el contenidor*/
+/* a continuacion lo estilos para el contenido*/
 
 .contenido {
   padding-top: 140px;
@@ -92,16 +92,30 @@
   position: absolute;
 }
 
-/* estilo para los boton de HireMe*/
+/* estilo para el boton index*/
 .button_index{
-  width: 175px;
-  height: 65px;
-  border-radius: 15px;
-  border-color:aqua;
-  border-style: hidden;
-  font-size: 40px;
-  background-color: #4b4545;
-  color: aqua;
+  margin-top: 2em;
+  padding: 1rem;
+  margin: 0.5em;
+  border-radius: 0rem;
+  font-size: 30px;
+  color: #07F1F1;
+  border-color: #07F1F1;
+  background-color: #3F4F4F;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+.button_index:hover {
+  color: white;
+  background-color: #07F1F1;
 }
 
 /* estilo para el texto del index*/
@@ -111,7 +125,7 @@
   font-style: normal;
   font-size: 60px;
   text-align: center;
-  color: #FFFFFF;
+  color: white;
 }
 
 .index{
@@ -127,34 +141,125 @@
   font-family: 'open sans';
   background-image: url('imagenes/Imagen de fondo webcv.jpg');
 }
+/* estilos aplicados en el about*/
+h1{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 0.5em;
+  position: left;
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 50px;
+  text-align: center;
+  color: #3F4F4F;
+
+}
+.p_about_1{
+  margin-left: 1em;
+  margin-right: 0.5em;
+  position: left;
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 40px;
+  text-align: justify;
+  color: #3F4F4F;
+}
+
+.p_about_2{
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  position: left;
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 30px;
+  text-align: justify;
+  color: #3F4F4F;
+}
+
+/* estilo para el boton de descarga cv*/
+.button_download_cv{
+  margin-top: 1.5em;
+  margin-left: 1.5em;
+  position: left;
+  padding:0.5rem;
+  border-radius: 8rem;
+  color: #07F1F1;
+  border-color: #07F1F1;
+  background-color: #3F4F4F;
+  font-size: 15px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-border-radius: 6rem;
+  -moz-border-radius: 6rem;
+  -ms-border-radius: 6rem;
+  -o-border-radius: 6rem;
+}
+
+.button_download_cv:hover {
+  color: white;
+  background-color: #07F1F1;
+}
 
 .about{
 
-  margin-top: 80px;
-  margin-left: 20px;
-  margin-right: 10px;
-  width: 40%;
-  height:100vh;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: top;
-  flex-direction:column;
-  font-family: 'open sans';
+  display: grid;
+  grid-template-areas: "left right";
+  gap: 25px;
   background-color: white;
-  text-align: justify;
-  font-size: 25px;
-  font-family:inherit;
+  margin-top: 0em;
 }
 
-/* estilo para los botones de descarga*/
-.button_download{
-  width: 180px;
-  border-radius: 15px;
-  border-color:aqua;
-  border-style: hidden;
-  font-size: 25px;
-  background-color: #4b4545;
-  color: aqua;
-  position: left;
+.photo_about{
+  display:grid;
+  place-content: ;
+  margin-top: 6em;
+  margin-left: 8em;
+  position: center;
+  height:400px;
+  width: 350px;
+  background-repeat: no-repeat;
+  background-image: url('/Miscelaneos/web_developer_foto.jpg');
+  border-radius: 2em;
+}
+
+.social_icons{
+  display:flex;
+  margin-top: 2em;
+  margin-left: 10em;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  
+}
+.about .right {
+  background-color: #3F4F4F;
+  width: 600px;
+  height: 649px;
+  color: white;
+  min-height: 200px;
+  border-radius: 0em;
+}
+
+.about .left {
+  grid-area: right;
+}
+.about .right {
+  grid-area: right;
+}
+
+
+@media (max-width: 768px) {
+  .about {
+      grid-template-areas: 'left' 'right';
+      padding: 1em 1em;
+  }
+
+  .about .left,
+  .about .right, {
+      width: 100%;
+  }
 }
