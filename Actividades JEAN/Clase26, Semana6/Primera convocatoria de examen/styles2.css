@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*Aqui agregamos los estilos de los estilos del icono flotante de whatsapp*/
+.whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+}
+.whatsapp-icon {
+    margin-top:13px;
+}
+
+/*Aqui comenzamos con los estilos de los estilos del primer contenedor llamado fotoPrincipal*/
+
+.fotoPrincipal{
+    display: grid;
+    background-image: url('/images/imagenPrincipal.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    align-items: center;
+    height: 300px;
+}
+h1{
+    padding: 20px 0;
+    color: black;
+    font-size: 30px;
+}
+h2{
+    padding-bottom: 20px;
+    color: grey;
+    font-size: 20px;
+}
+
+/*Aqui comenzamos con los estilos de los grids anidados del contenedor llamado nested_grid*/
+
+.nested_grid{
+    display: grid;
+    grid-template-areas: 'elemento1 elemento2 elemento3';
+    gap: 0.5m;
+    padding: 0 200px;
+}
+p{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.element1{
+    text-align: center;
+    border: 1px solid gray;
+    background-color: #339b45;
+    padding: 40px 0;
+    grid-area:elemento1;
+}
+.element2{
+    text-align: center;
+    border: 1px solid gray;
+    background-color: #8ae298;
+    padding: 40px 0;
+    grid-area:elemento2;
+}
+.element3{
+    text-align: center;
+    border: 1px solid gray;
+    background-color: #153119;
+    padding: 40px 0;
+    grid-area:elemento3;
+}
+
+/*A continuación aplicamos las condiciones del responsive*/
+
+@media (max-width:750px)
+{
+    .nested_grid{
+        grid-template-areas: 
+        'elemento1'
+        'elemento2'
+        'elemento3'; 
+        }
+    .fotoPrincipal{
+        grid-template-areas: 'fotoPrincipal';
+        }
+}
