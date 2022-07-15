@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles2.css">
+    <title>ExamenWeb</title>
+</head>
+<body>
+    <!--Este apartado incluye el enlace del icono de whatsapp flotante de la web-->
+
+    <a href="https://wa.me/5211234567890?text=Me%20gustaría%20saber%20el%20precio%20del%20coche" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+
+    <!--Este apartado contiene los dos contenedores de la web, además los 3 elementos grid contenidos en el segundo contenedor llamado nested_grid. El primer contenedor es fotoPrincipal-->
+    <div>
+
+        <div class="fotoPrincipal">
+
+        </div>
+            <center>
+            <h1><b>Para cuidar un planeta de mas de siete mil millones de personas,<br> necesitamos muchos hechos. Miles de millones de hechos</b></h1>
+        
+            <h2>"CUIDEMOS EL PLANETA" es la inciativa de Mercadona para decir <b>SÍ A SEGUIR CUIDANDO EL PLANETA</b> con hechos. <br> En este canal encontraras tres tipos de contenidos diferentes que nos ayudarán a conseguirlo:
+
+            </h2> 
+            </center> 
+        </div>
+
+        <div class="nested_grid">
+            <div class="element1">
+                <p><b>Nuestros Hechos</b></p>
+            </div>
+            <div class="element2">
+                <p><b>Aprende Más</b></p>
+            </div>
+            <div class="element3">
+                <p><b>Compromiso Sostenible</b></p>
+            </div>
+        </div>
+    </div>
+
+    <!--Seguidamente, se podrá visualizar el contenido JS que se ha aplicado en la web-->
+    
+    <script>
+
+        window.alert("Bienvenido/a a nuestra Página Web");
+    
+        var edad = prompt('Disculpa las molestias, para continuar, necesitamos saber tu edad.')
+        
+        var resultado = edad
+    
+        if (resultado >=18) {
+            window.alert('Gracias por responder, usted ha sido autorizado a visitar nuestra Página Web');
+        }
+        if (resultado <18) {
+            window.alert('Lo sentimos, solo si eres mayor de 18 años, podrás acceder a nuestra página web.');
+            location.replace('https://www.despedidasbig.com/blog/wp-content/uploads/2021/04/despedidas-divertidas-en-madrid.jpg')
+        }
+            function openNav(){
+                document.getElementById("myNav").style.height = "100%";
+            }
+            function closeNav(){
+                document.getElementById("myNav").style.height = "0%";
+            }
+        </script>
+</body>
+</html>
