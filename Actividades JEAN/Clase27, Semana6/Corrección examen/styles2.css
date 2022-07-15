@@ -21,10 +21,33 @@
 }
 
 /*Aqui comenzamos con los estilos de los estilos del primer contenedor llamado fotoPrincipal*/
-
+.contedor{
+    display: grid;
+    background-color: yellowgreen;
+    align-items: center;
+    align-content: center;
+}
+.mensajeBienvenidaFlotante{
+    width: 200px;
+    height: 200px;
+    background-color: #47acffbb;
+    border-radius: 400px;
+    -webkit-border-radius: 400px;
+    -moz-border-radius: 400px;
+    -ms-border-radius: 400px;
+    -o-border-radius: 400px;
+    position: absolute;
+    top: 50px;
+    left: 570px;
+    text-align: center;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .fotoPrincipal{
     display: grid;
-    background-image: url('/images/imagenPrincipal.jpg');
+    background-image: url('/Miscelaneos/imagen_git_fondo_home_jaar.gif');
     background-repeat: no-repeat;
     background-size: 100%;
     align-items: center;
@@ -32,7 +55,7 @@
 }
 h1{
     padding: 20px 0;
-    color: black;
+    color: rgb(21, 21, 128);
     font-size: 30px;
 }
 h2{
@@ -40,39 +63,51 @@ h2{
     color: grey;
     font-size: 20px;
 }
-
-/*Aqui comenzamos con los estilos de los grids anidados del contenedor llamado nested_grid*/
-
-.nested_grid{
-    display: grid;
-    grid-template-areas: 'elemento1 elemento2 elemento3';
-    gap: 0.5m;
-    padding: 0 200px;
+h3{
+    color: white;
 }
 p{
     font-size: 30px;
     color: white;
     text-align: center;
 }
+
+/*Aqui comenzamos con los estilos de los grids anidados del contenedor llamado nested_grid*/
+
+.nested_grid{
+    display: grid;
+    gap: 0.1em;
+    grid-template-areas: 'elemento1 elemento2 elemento3';
+    padding: 0px 300px;
+}
 .element1{
-    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 250px;
     border: 1px solid gray;
-    background-color: #339b45;
-    padding: 40px 0;
+    background-color: #0716e6;
     grid-area:elemento1;
 }
 .element2{
-    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 250px;
     border: 1px solid gray;
-    background-color: #8ae298;
-    padding: 40px 0;
+    background-color: #4b56f3;
     grid-area:elemento2;
 }
 .element3{
-    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 250px;
     border: 1px solid gray;
-    background-color: #153119;
-    padding: 40px 0;
+    background-color: #080e63;
     grid-area:elemento3;
 }
 
@@ -82,11 +117,9 @@ p{
 {
     .nested_grid{
         grid-template-areas: 
-        'elemento1'
-        'elemento2'
-        'elemento3'; 
-        }
-    .fotoPrincipal{
-        grid-template-areas: 'fotoPrincipal';
-        }
+        'elemento1' 'elemento2'
+        'elemento3';
+        padding: 30px 135px;
+        justify-content: center;
+
 }
