@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
 }
-
+/* ------------------------------------------------------------------------------------ */
 /* Nav button */
 .navMenu{
   position: absolute;
@@ -92,7 +92,8 @@
   position: absolute;
 }
 
-/* estilo para el boton index*/
+/* ------------------------------------------------------------------------------------ */
+/* estilo para el boton del home (index)*/
 .button_index{
   margin-top: 2em;
   padding: 1rem;
@@ -118,7 +119,7 @@
   background-color: #07F1F1;
 }
 
-/* estilo para el texto del index*/
+/* estilo para el texto del home (index)*/
 .p_index{
   position: center;
   font-family: 'Inter';
@@ -141,6 +142,8 @@
   font-family: 'open sans';
   background-image: url('imagenes/Imagen de fondo webcv.jpg');
 }
+
+/* ------------------------------------------------------------------------------------ */
 /* estilos aplicados en el about*/
 h1{
   margin-top: 1em;
@@ -251,6 +254,80 @@ h1{
   grid-area: right;
 }
 
+/* ------------------------------------------------------------------------------------ */
+/* estilos aplicados en el resume*/
+
+/* ------------------------------------------------------------------------------------ */
+/* estilos aplicados en el skills*/
+.skills-main{
+  
+}
+.caja-padre{
+  width: 40%;
+  min-width: 590px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 25%;
+  top: 50%;
+}
+.contenedor{
+  width: 100%;
+  padding: 30px 30px 50px;
+  background: linear-gradient(450deg, #07F1F1, BLACK);
+  border: 2px solid rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+.contenedor *{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-weight: 500;
+}
+h2{
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+.skills:not(:last-child){
+  margin-bottom: 30px;
+}
+.detalles{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.menu{
+  position: relative;
+  border: 1px solid cyan;
+  border-radius: 20px;
+}
+.menu div{
+  position: relative;
+  width: 0;
+  height: 8px;
+  border-radius: 10px;
+  background-color: cyan;
+}
+/* ------------------------------------------------------------------------------------ */
+/* estilos aplicados en el contact*/
+
+/* ------------------------------------------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+/*efecto de animacion css del about*/
 
 @media (max-width: 768px) {
   .about {
@@ -261,5 +338,40 @@ h1{
   .about .left,
   .about .right, {
       width: 100%;
+  }
+}
+
+/*efecto de animacion css del panel*/
+
+#html-menu{
+  animation: html-barra 2s forwards;
+}
+@keyframes html-barra{
+  100%{
+      width: 90%;
+  }
+}
+#css-menu{
+  animation: css-barra 2s forwards;
+}
+@keyframes css-barra{
+  100%{
+      width: 75%;
+  }
+}
+#js-menu{
+  animation: js-barra 2s forwards;
+}
+@keyframes js-barra{
+  100%{
+      width: 60%;
+  }
+}
+#angular-menu{
+  animation: angular-barra 2s forwards;
+}
+@keyframes angular-barra{
+  100%{
+      width: 30%;
   }
 }

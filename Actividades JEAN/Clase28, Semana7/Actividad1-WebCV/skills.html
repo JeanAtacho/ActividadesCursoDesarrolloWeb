@@ -8,12 +8,9 @@
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>WebCV</title>
-
+    <title>skills</title>
 </head>
-
 <body>
-    
     <header>
         <div id="myNav" class="overlay">
             <!--overlay close button-->
@@ -21,20 +18,145 @@
             <!--overlay content -->
             <div class="overlay-content">
                 <ul>
-                    <li><a href="http://www.google.es">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#">Resume</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
             <!--overlay Open button-->
         <div class="navMenu" onclick="openNav()">&#9776; </div>
-        
- 
-    </header>  
-    <div class="myPage">
-          
+    </header> 
+    
+    <div>
+        <center>
+        <h1>MY SKILS</h1>
+        </center>
+    </div>
 
+<div class="skills-main">
+
+    <div class="caja-padre">
+        <div class="contenedor">
+            <h2>CODING-SKILLS</h2>
+
+            <div class="skills">
+                <div class="detalles">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="menu">
+                    <div id="html-menu"></div>
+                </div>
+            </div>
+
+            <div class="skills">
+                <div class="detalles">
+                    <span>CSS</span>
+                    <span>75%</span>
+                </div>
+
+                <div class="menu">
+                    <div id="css-menu"></div>
+                </div>
+            </div>
+
+            <div class="skills">
+                <div class="detalles">
+                    <span>JAVASCRIPT</span>
+                    <span>60%</span>
+                </div>
+
+                <div class="menu">
+                    <div id="js-menu"></div>
+                </div>
+            </div>
+
+            <div class="skills">
+                <div class="detalles">
+                    <span>ANGULAR</span>
+                    <span>30%</span>
+                </div>
+
+                <div class="menu">
+                    <div id="angular-menu"></div>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <div class="caja-padre">
+        <div class="contenedor">
+            <h2>CODING-SKILLS</h2>
+
+            <div class="skills">
+                <div class="detalles">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="menu">
+                    <div id="html-menu"></div>
+                </div>
+            </div>
+
+            <div class="skills">
+                <div class="detalles">
+                    <span>CSS</span>
+                    <span>75%</span>
+                </div>
+
+                <div class="menu">
+                    <div id="css-menu"></div>
+                </div>
+            </div>
+
+            <div class="skills">
+                <div class="detalles">
+                    <span>JAVASCRIPT</span>
+                    <span>60%</span>
+                </div>
+
+                <div class="menu">
+                    <div id="js-menu"></div>
+                </div>
+            </div>
+
+            <div class="skills">
+                <div class="detalles">
+                    <span>ANGULAR</span>
+                    <span>30%</span>
+                </div>
+
+                <div class="menu">
+                    <div id="angular-menu"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+
+    <script>
+ 
+        // barra de menu //
+        function openNav(){
+                   document.getElementById("myNav").style.height = "100%";
+               }
+       
+       function closeNav(){
+                   document.getElementById("myNav").style.height = "0%";
+               }
+    </script>
+</body>
+</html>
