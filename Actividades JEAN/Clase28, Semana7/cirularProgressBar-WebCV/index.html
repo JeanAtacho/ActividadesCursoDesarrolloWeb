@@ -9,38 +9,126 @@
     <title>circular-progress-bar</title>
 </head>
 <body>
+ 
     <!-- a continuación, se creara un barra circular de progreso porcentual con gradiente de color-->
-    <div class="skills">
-        <div class="outer">
-            <div class="inner">
-                <div id="number">
-                    65%
+<div class="contenedorCirculos">
+
+    <div id="tittle1">
+        <center><h3>WEB DESIGN</h3></center><br>
+        <div class="skills">
+            <div class="outer">
+                <div id="tittle">
+                    <div class="inner">
+                        <div id="number1">
+                            65%
+                        </div>
+                    </div>
                 </div>
+                    <!-- esto es un codigo svg importado del tutorial elegido para realizar la circular-bar-progress con estilo en gradiente de colores-->
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                        <defs>
+                        <linearGradient id="GradientColor">
+                        <stop offset="0%" stop-color="#07F1F1" />
+                        <stop offset="100%" stop-color="#07F1F1" />
+                        </linearGradient>
+                        </defs>
+                        <circle class="circle65" cx="80" cy="80" r="70" stroke-linecap="round" />
+                    </svg>
             </div>
         </div>
-        <!-- esto es un codigo svg importado del tutorial elegido para realizar la circular-bar-progress con estilo en gradiente de colores-->
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-            <defs>
-            <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#e91e63" />
-                <stop offset="100%" stop-color="#673ab7" />
-            </linearGradient>
-            </defs>
-            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
-        </svg>
     </div>
 
+<br><br>
+
+<div id="tittle2">
+    <center><h3>WEB DEVELOPMENT</h3></center><br>
+<div class="skills">
+    <div class="outer">
+     <div id="tittle">
+         <div class="inner">
+         <div id="number2">
+             50%
+            </div>
+     </div>
+    </div>
+ <!-- esto es un codigo svg importado del tutorial elegido para realizar la circular-bar-progress con estilo en gradiente de colores-->
+ <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+     <defs>
+         <linearGradient id="GradientColor">
+         <stop offset="0%" stop-color="#07F1F1" />
+         <stop offset="100%" stop-color="#07F1F1" />
+     </linearGradient>
+    </defs>
+     <!-- <circle cx="80" cy="80" r="70" stroke-linecap="round" /> -->
+     <circle class="circle50" cx="80" cy="80" r="70" stroke-linecap="round"  />
+
+    </svg>
+</div>
+</div>
+</div>
+
+<br><br>
+
+<div id="tittle3">
+    <center><h3>UI/UX DESIGN</h3></center><br>
+    <div class="skills">
+        <div class="outer">
+            <div id="tittle">
+                <div class="inner">
+                    <div id="number3">
+                        35%
+                    </div>
+                </div>
+            </div>
+            <!-- esto es un codigo svg importado del tutorial elegido para realizar la circular-bar-progress con estilo en gradiente de colores-->
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                <defs>
+                    <linearGradient id="GradientColor">
+                        <stop offset="0%" stop-color="#07F1F1" />
+                        <stop offset="100%" stop-color="#07F1F1" />
+                    </linearGradient>
+                </defs>
+                <circle class="circle35" cx="80" cy="80" r="70" stroke-linecap="round" />
+                
+            </svg>
+        </div>
+    </div>
+</div>
+</div>
+
 <script>
-let number = document.getElementById("number");
-let counter = 0;
-setInterval(() => {
-    if(counter == 65){
+let number1 = document.getElementById("number1");
+let counter1 = 0;
+setInterval(() => {if(counter1 == 65){
         clearInterval();
     }else{
-        counter += 1;
-        number.innerHTML = counter + "%";
+        counter1 += 1;
+        number1.innerHTML = counter1 + "%";
     }
-}, 20)
+}, 30);
+
+let number2 = document.getElementById("number2");
+let counter2 = 0;
+setInterval(() => {
+    if(counter2 == 50){
+        clearInterval();
+    }else{
+        counter2 += 1;
+        number2.innerHTML = counter2 + "%";
+    }
+}, 20);
+
+let number3 = document.getElementById("number3");
+let counter3 = 0;
+setInterval(() => {
+    if(counter3 == 35){
+        clearInterval();
+    }else{
+        counter3 += 1;
+        number3.innerHTML = counter3 + "%";
+    }
+}, 50)
+
 </script>
 </body>
 </html>
