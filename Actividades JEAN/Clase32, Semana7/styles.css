@@ -1,5 +1,4 @@
 /* este link corresponde al apartado contact me */
-
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 
 
@@ -62,7 +61,6 @@
   ul {
     list-style: none;
   }
-  
   /*body {
     font: 18px/1.5 "Open Sans", sans-serif;
     background: var(--bodyColor);
@@ -187,6 +185,7 @@
 
 
 /* estilo para el boton del home (index)*/
+
 
 .button_index {
     margin-top: 2em;
@@ -373,6 +372,86 @@ h1 {
 
 
 /* estilos aplicados en el resume*/
+
+.my-resume {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+.experience-resume,.education-resume{
+  margin: 0 0vw;
+}
+.education-resume {
+  height: 350px;
+  width: 45vw;
+  background-color: white;
+  overflow-y: auto;
+  margin-right: 1vw;
+}
+
+.experience-resume {
+  height: 350px;
+  width: 45vw;
+  background-color: white;
+  overflow-y: auto;
+  margin-left: 1vw;
+}
+
+
+.h2-resume{
+  font-size: 30px;
+  font-family: Inter;
+  font-style: normal;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+.h3-resume{
+  font-size: 25px;
+  font-family: Inter;
+  font-style: normal;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+.hr-resume{
+  width: 500px;
+  margin-left: 30px;
+  border-color: #07F1F1;
+}
+.ul-resume{
+  margin-left: 20px;
+}
+.button_download_cv-resume {
+  margin-top: 2.5em;
+  margin-left:5em;
+  padding: 0.5rem;
+  border-radius: 8rem;
+  color: #07F1F1;
+  border-color: #07F1F1;
+  background-color: #3F4F4F;
+  font-size: 15px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-border-radius: 6rem;
+  -moz-border-radius: 6rem;
+  -ms-border-radius: 6rem;
+  -o-border-radius: 6rem;
+}
+
+.button_download_cv:hover {
+  color: white;
+  background-color: #07F1F1;
+}
+
+
 
 
 /* ------------------------------------------------------------------------------------ */
