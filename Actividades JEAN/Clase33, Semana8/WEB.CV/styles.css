@@ -11,7 +11,7 @@
     --bodyColor: #23609c;
     --borderFormEls: #07F1F1;
     --bgFormEls: hsla(0, 0%, 14%, 0.829);
-    --bgFormElsFocus: hsl(0, 8%, 20%);
+    --bgFormElsFocus: #07f1f177;
   }
   
   * {
