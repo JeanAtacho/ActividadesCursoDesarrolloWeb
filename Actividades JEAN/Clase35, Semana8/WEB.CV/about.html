@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>about</title>
+
+</head>
+
+<body>
+    
+    <header>
+        <div id="myNav" class="overlay">
+            <!--overlay close button-->
+            <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+            <!--overlay content -->
+            <div class="overlay-content">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+            <!--overlay Open button-->
+        <div class="navMenu" onclick="openNav()">&#9776; </div>
+    </header> 
+    
+    <div class="about">
+         
+        <div class="Left">
+            <center>
+            <h1>A STORY <span class="atencion">ABOUT</span> ME</h1>
+            </center>
+            
+                <p class="p_about_1">
+                <span class="atencion"> I´m Jean Atacho</span> and I´m a freelancer <br> Web Developer. 
+                </p>
+                <br><br>
+                <p class="p_about_2">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br><br>
+    
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>
+                </p>
+    
+            <button class="button_download_cv">Download CV</button>
+        </div>
+        
+        <div class="right">
+            <div class="photo_about">
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <div class="footer-content">
+            <h3>Jean Atacho</h3>
+            <p>Jean Atacho Lorem ipsum dolor sit amet consectetur adipiscing elit montes eros mauris, suspendisse lacus himenaeos praesent placerat dapibus at molestie lacus himenaeos praesent placerat dapibus at molestie.</p>
+            <ul class="socials">
+                <li><a href="https://es-es.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/?lang=es" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.google.es/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://es.linkedin.com/in/jeanatacho" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                <li><a href="https://github.com/JeanAtacho" target="_blank"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 <a href="#">jeanatachodeveloper</a>  </p>
+                    <div class="footer-menu">
+                      <ul class="f-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                      </ul>
+                    </div>
+        </div>
+    
+    </footer>
+
+    
+    <script>
+ 
+        // barra de menu //
+        function openNav(){
+                   document.getElementById("myNav").style.height = "100%";
+               }
+       
+       function closeNav(){
+                   document.getElementById("myNav").style.height = "0%";
+               }
+       </script>
+</body>
+</html>
