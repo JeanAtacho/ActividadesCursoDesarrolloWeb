@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+
+<body>
+
+<center>
+
+<button style="width: 50px;height:50px; border-radius:400px" onclick="tirar()">tirar</button>
+</center>
+<br><br><br>
+<center>
+<select name="select" id="color">
+
+<option value="verde" >verde</option>
+<option value="negro" >negro</option>
+<option value="rojo">rojo</option>
+
+</select>
+<input type="number" name="" id="num" style="width: 60px;">
+</center>
+<br><br>
+<center>
+
+
+<img src="1.gif" alt="" style="width: 300px; border-radius:300px">
+
+
+</center>
+<center>
+<br><br><b>
+<div id="div"></div>
+<div id="dineros"></div>
+</center>
+
+<script>
+var dineros=30;
+function tirar(){
+
+var numRandom = parseInt((Math.random() * 36) + 1);
+
+var colorAleatorio = parseInt(Math.random() * 3);
+
+var ruleta = ["verde", "rojo", "negro"];
+
+var tiradaColor=document.getElementById('color').value;
+var num=document.getElementById('num').value;
+
+var color="";
+
+if(colorAleatorio==0)
+{
+color="green";
+}else if(colorAleatorio==1)
+{
+color="red"
+}else{
+color="black"
+}
+
+
+document.getElementById('div').innerHTML = `<p style="color:;">El resultado es ${ruleta[colorAleatorio]} <span style="background-color:${color};color:white;padding:10px">${numRandom}</span>`
+
+
+document.getElementById('dineros').innerHTML=`tienes ${dineros}€`
+
+if(tiradaColor==ruleta[colorAleatorio] && num==numRandom){
+
+alert("ahora tienes" +((1*36)+dineros ))
+}
+else{
+alert("te quedan "+(dineros-1))
+dineros--;
+}
+document.getElementById('dineros').innerHTML=`tienes ${dineros}€`
+
+}
+
+document.getElementById('dineros').innerHTML=`tienes ${dineros}€`
+
+
+
+
+</script>
+</body>
+
+</html>
+
+<!-- un array con tres campos. Rojo, negro y verde -->
+
+<!-- una variable que contiene un número aleatorio entre 1 y 36
+
+un boton que genera de manera aleatoria un color y una posición.

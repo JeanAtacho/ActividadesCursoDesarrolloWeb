@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <center>
+        <h1 style="color: blue;">GENERADOR DE CARTAS ALEATORIAS</h1>
+        <br><br>
+
+        <button onclick="adivinar()">adivinar</button>
+        <br><br><br>
+
+        <!-- <select name="palo" id="palo">
+        
+        
+        <option value="♥" >♥</option>
+        <option value="♠" >♠</option>
+        <option value="♣">♣</option>
+        <option value="♦">♦</option>
+        
+        </select>
+        
+        <select name="select" id="num">
+        
+        
+        <option value="♥" >A</option>
+        <option value="♠" >2</option>
+        <option value="♣">3</option>
+        <option value="♦">4</option>
+        
+        </select> -->
+        
+        <br><br>
+        
+        <div id="div" style="border-radius:20px;width: 150px; background-color:rgb(222, 221, 221); height:100px; display:flex; justify-content:center; align-items:center; font-size:40px">
+        </div>
+        
+        </center>
+        
+        <script>
+        function adivinar() {
+        
+        
+        //var adivinadorPalo = document.getElementById('palo').value;
+        
+        
+        var palos = ["♥", "♦", "♣", "♠"];
+        
+        var numeros = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "j", "q", "k"]
+        
+        
+        var palosRandom = parseInt(Math.random() * 4);
+        var numRandom = parseInt(Math.random() * 13);
+        
+        console.log(palos[palosRandom] + numeros[numRandom]);
+        var color = "";
+        
+        if (palosRandom == 0 || palosRandom == 1) {
+        color = "red";
+        } else {
+        
+        color = "black";
+        
+        }
+        
+        //Adivinador de palo
+        // if (adivinadorPalo == palos[palosRandom]) {
+        // alert("Has adivinado el palo " + palos[palosRandom])
+        // } else {
+        // alert("vuelve a intentarlo");
+        // }
+        
+        
+        document.getElementById('div').innerHTML = `<span style="color:${color};"> ${palos[palosRandom]} ${numeros[numRandom]}</span>`
+        
+        
+        }
+        </script>
+
+</body>
+</html>

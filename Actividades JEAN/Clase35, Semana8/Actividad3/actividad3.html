@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta</title>
+</head>
+<body>
+        <center>
+            <h1 style="color: blue;">LA RULETA</h1>
+            <br><br>
+
+            <button onclick="girar()">Girar</button>
+            <br><br><br>
+
+            <!-- <select name="palo" id="palo">
+            
+            
+            <option value="♥" >♥</option>
+            <option value="♠" >♠</option>
+            <option value="♣">♣</option>
+            <option value="♦">♦</option>
+            
+            </select>
+            
+            <select name="select" id="num">
+            
+            
+            <option value="♥" >A</option>
+            <option value="♠" >2</option>
+            <option value="♣">3</option>
+            <option value="♦">4</option>
+            
+            </select> -->
+            
+            <br><br>
+            
+            <div id="div" style="border-radius:20px;width: 150px; background-color:rgb(222, 221, 221); height:100px; display:flex; justify-content:center; align-items:center; font-size:40px">
+            </div>
+        
+        </center>
+        
+        <script>
+        function girar() {
+        
+        var colores = ["blanco", "negro", "rojo", "verde"];
+        
+        // var numeros = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36"]
+        
+        
+        var coloresRandom = parseInt(Math.random() * 4);
+        var numRandom = parseInt(Math.random() * 36);
+        
+        var color = "";
+        
+         if (numRandom == 0 || numRandom == 4 || numRandom == 8 || numRandom == 12 || numRandom == 16 || numRandom == 20 || numRandom == 24 || numRandom == 28 || numRandom == 32) {
+         color = "white";
+         }else if (numRandom == 1 || numRandom == 5 || numRandom == 9 || numRandom == 13 || numRandom == 17 || numRandom == 21 || numRandom == 25 || numRandom == 29 || numRandom == 33) {
+         color = "black";
+         }else if(numRandom == 2 || numRandom == 6 || numRandom == 10 || numRandom == 14 || numRandom == 18 || numRandom == 22 || numRandom == 26 || numRandom == 30 || numRandom == 34) {
+         color = "red";
+         }else if(numRandom == 3 || numRandom == 7 || numRandom == 11 || numRandom == 15 || numRandom == 19 || numRandom == 23 || numRandom == 27 || numRandom == 31 || numRandom == 35) {
+         color = "green";
+         }
+
+         console.log(color + numRandom);
+        
+        
+        document.getElementById('div').innerHTML = `<span style="color:${color};"> ${numRandom}</span>`
+        
+        }
+        </script>
+</body>
+</html>
