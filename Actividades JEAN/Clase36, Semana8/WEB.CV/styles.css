@@ -1,0 +1,1103 @@
+/* este link corresponde al apartado contact me */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+
+
+/* RESET RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+    --white: white;
+    --red: #07F1F1;
+    --bodyColor: #23609c;
+    --borderFormEls: #07F1F1;
+    --bgFormEls: hsla(0, 0%, 14%, 0.829);
+    --bgFormElsFocus: #07f1f177;
+  }
+
+  
+  * {
+    padding: 0;
+    margin: 0;
+    outline: none;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  input,
+  select,
+  textarea,
+  button {
+    font-family: inherit;
+    font-size: 100%;
+  }
+  
+  button,
+  label {
+    cursor: pointer;
+  }
+  
+  select {
+    appearance: none;
+  }
+  
+  /* Remove native arrow on IE */
+  select::-ms-expand {
+    display: none;
+  }
+  
+  /*Remove dotted outline from selected option on Firefox*/
+  /*https://stackoverflow.com/questions/3773430/remove-outline-from-select-box-in-ff/18853002#18853002*/
+  /*We use !important to override the color set for the select on line 99*/
+  select:-moz-focusring {
+    color: transparent !important;
+    text-shadow: 0 0 0 var(--white);
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  /*body {
+    font: 18px/1.5 "Open Sans", sans-serif;
+    background: var(--bodyColor);
+    color: var(--white);
+    margin: 1.5rem 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+/* ------------------------------------------------------------------------------------ */
+
+
+/* Nav button */
+
+.navMenu {
+    position: absolute;
+    top: 15px;
+    right: 23px;
+    cursor: pointer;
+    color: #07F1F1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 55px;
+}
+
+
+/* overlay (background) */
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999999;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.801);
+    background-color: rgba(0, 0, 0, 0.801);
+    overflow-y: hidden;
+    transform: 0.5s;
+}
+
+
+/* Hight and Width depends on how you want to reveal the overlay ( see Js code ) */
+
+
+/* Close Button */
+
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #07F1F1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+
+/* Position the content inside the overlay */
+
+.overlay-content {
+    position: relative;
+    top: 15%;
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay-content li {
+    margin: 7px;
+    padding: 10px;
+    list-style: none;
+}
+
+.overlay-content li a {
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+    margin: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* Menu Hover Effect */
+
+.overlay-content a:hover,
+.overlay-content a:focus {
+    color: white;
+    background: #07F1F1;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+/* a continuacion lo estilos para el contenido*/
+
+.contenido {
+    padding-top: 140px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: safe;
+    background-color: rgb(5, 5, 5);
+    position: absolute;
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+
+
+/* estilo para el boton del home (index)*/
+
+
+.button_index {
+    margin-top: 2em;
+    padding: 1rem;
+    position: center;
+    margin: 0.5em;
+    border-radius: 0rem;
+    font-size: 30px;
+    color: #07F1F1;
+    border-color: #07F1F1;
+    background-color: #3F4F4F;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.button_index:hover {
+    color: white;
+    background-color: #07F1F1;
+}
+
+
+/* estilo para el texto del home (index)*/
+
+.p_index {
+    position: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+}
+
+.index {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'open sans';
+    background-image: url('imagenes/Imagen de fondo webcv.jpg');
+}
+
+/* este estilo, nos permite colocar un color especifico deseado en los titulos mediante el uso de la etiqueta span y tambien de las lineas de texto del index*/
+.atencion {
+    color: #07F1F1 !important;
+}
+.miNombre {
+    font-size: 90px;
+    text-align: center;
+}
+.miSlogan {
+    font-size: 40px;
+    text-align: center;
+}
+.welcome {
+    font-size: 70px;
+    text-align: center;
+    color: #07F1F1;
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+/* estilos aplicados en el about*/
+
+h1 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 50px;
+    text-align: center;
+    color: #3F4F4F;
+}
+
+.p_about_1 {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 40px;
+    text-align: justify;
+    color: #3F4F4F;
+}
+
+.p_about_2 {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    position: left;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 30px;
+    text-align: justify;
+    color: #3F4F4F;
+}
+
+/* estilo para el boton de descarga cv*/
+
+.button_download_cv {
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+    margin-bottom: 1.5em;
+    position: left;
+    padding: 0.5rem;
+    border-radius: 8rem;
+    color: #07F1F1;
+    border-color: #07F1F1;
+    background-color: #3F4F4F;
+    font-size: 15px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-border-radius: 6rem;
+    -moz-border-radius: 6rem;
+    -ms-border-radius: 6rem;
+    -o-border-radius: 6rem;
+}
+
+.button_download_cv:hover {
+    color: white;
+    background-color: #07F1F1;
+}
+
+.about {
+    display: grid;
+    grid-template-areas: "left right";
+    gap: 25px;
+    background-color: white;
+    margin-top: 0em;
+}
+
+.photo_about {
+    display: grid;
+    margin-top: 4.5em;
+    margin-left: 8em;
+    position: center;
+    height: 590px;
+    width: 350px;
+    background-repeat: no-repeat;
+    background-image: url('https://img.freepik.com/foto-gratis/apuesto-hombre-apuntando-lateral_1368-5182.jpg?w=360');
+    border-radius: 2em;
+}
+
+.social_icons {
+    display:flex;
+    margin-top: 2em;
+    margin-left: 10em;
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.about .right {
+    background-color: white;
+    width: 600px;
+    height: 649px;
+    color: white;
+    min-height: 200px;
+    border-radius: 0em;
+}
+
+.about .left {
+    grid-area: right;
+}
+
+.about .right {
+    grid-area: right;
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+
+
+/* estilos aplicados en el resume*/
+
+.my-resume {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+.experience-resume,.education-resume{
+  margin: 0 0vw;
+}
+.education-resume {
+  height: 350px;
+  width: 45vw;
+  background-color: white;
+  overflow-y: auto;
+  margin-right: 1vw;
+}
+
+.experience-resume {
+  height: 350px;
+  width: 45vw;
+  background-color: white;
+  overflow-y: auto;
+  margin-left: 1vw;
+}
+
+
+.h2-resume{
+  font-size: 30px;
+  font-family: Inter;
+  font-style: normal;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+.h3-resume{
+  font-size: 25px;
+  font-family: Inter;
+  font-style: normal;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+.hr-resume{
+  width: 500px;
+  margin-left: 30px;
+  border-color: #07F1F1;
+}
+.ul-resume{
+  margin-left: 20px;
+}
+.button_download_cv-resume {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  margin-left:5em;
+  padding: 0.5rem;
+  border-radius: 8rem;
+  color: #07F1F1;
+  border-color: #07F1F1;
+  background-color: #3F4F4F;
+  font-size: 15px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-border-radius: 6rem;
+  -moz-border-radius: 6rem;
+  -ms-border-radius: 6rem;
+  -o-border-radius: 6rem;
+}
+
+.button_download_cv:hover {
+  color: white;
+  background-color: #07F1F1;
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------ */
+
+
+/* estilos aplicados en el skills*/
+
+.skills-main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+
+.caja-padre {
+    width: 10%;
+    margin:10px 50px;
+    margin-left: 75px;
+    min-width: 500px;
+    
+}
+
+.contenedor {
+    width: 100%;
+    height: 325px;
+    padding: 30px 30px 50px;
+    background: linear-gradient(450deg, #023b3b, BLACK);
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.contenedor * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 500;
+}
+
+h2 {
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.skills:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.detalles {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.menu {
+    position: relative;
+    border: 1px solid #07F1F1;
+    border-radius: 20px;
+}
+
+.menu div {
+    position: relative;
+    width: 0;
+    height: 8px;
+    border-radius: 10px;
+    background-color: #07F1F1;
+}
+
+/* estilos aplicados en la circular-bar*/
+
+.skills2{
+    width: 160px;
+    height: 160px;
+    /* background: cornflowerblue; */
+    position: relative;
+}
+.outer{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), 
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+.inner{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), 
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), 
+                -0.5px -0.5px 0px rgba(255, 255, 255, 1), 
+                0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 
+                0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+.contenedorCirculos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+#number1{
+    font-weight: 600;
+    color: white;
+}
+#number2{
+    font-weight: 600;
+    color: white;
+}
+#number3{
+    font-weight: 600;
+    color: white;
+}
+#tittle1{
+    font-weight: 600;
+    color: white;
+}
+#tittle2{
+    font-weight: 600;
+    color: white;
+}
+#tittle3{
+    font-weight: 600;
+    color: white;
+}
+.circle65{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim65 2s linear forwards;
+}
+.circle50{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim50 2s linear forwards;
+}
+.circle35{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim35 2s linear forwards;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/*aplicando estilos para la cuarta tabla soft-skills*/
+.soft-skills{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-left: 20px;
+    list-style-type:square;
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------ */
+
+
+/* estilos aplicados en el contact*/
+.contact {
+    width: 100%;
+    height: 100vh;
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'open sans';
+    background-image: url('imagenes/Imagen de fondo webcv.jpg');
+}
+
+.h1-contact {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 50px;
+    color: white;
+}
+
+/* FORM ELEMENTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.my-form h1 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .my-form li,
+  .my-form .grid > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+  
+  .my-form select,
+  .my-form input,
+  .my-form textarea,
+  .my-form button {
+    width: 100%;
+    line-height: 1.5;
+    padding: 15px 10px;
+    border: 1px solid var(--borderFormEls);
+    color: var(--white);
+    background: var(--bgFormEls);
+    transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
+      transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+  }
+  
+  .my-form textarea {
+    height: 170px;
+  }
+  
+  .my-form ::placeholder {
+    color: inherit;
+    /*Fix opacity issue on Firefox*/
+    opacity: 1;
+  }
+  
+  .my-form select:focus,
+  .my-form input:focus,
+  .my-form textarea:focus,
+  .my-form button:enabled:hover,
+  .my-form button:focus,
+  .my-form input[type="checkbox"]:focus + label {
+    background: var(--bgFormElsFocus);
+  }
+  
+  .my-form select:focus,
+  .my-form input:focus,
+  .my-form textarea:focus {
+    transform: scale(1.02);
+  }
+  
+  .my-form *:required,
+  .my-form select {
+    background-repeat: no-repeat;
+    background-position: center right 12px;
+    background-size: 15px 15px;
+  }
+  
+  .my-form *:required {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg);
+  }
+  
+  .my-form select {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/down.svg);
+  }
+  
+  .my-form *:disabled {
+    cursor: default;
+    filter: blur(2px);
+  }
+  /* FORM BTNS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.my-form .required-msg {
+    display: none;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg)
+      no-repeat center left / 15px 15px;
+    padding-left: 20px;
+    color: #fff;
+  }
+  
+  .my-form .btn-grid {
+    position: relative;
+    overflow: hidden;
+    transition: filter 0.2s;
+  }
+  
+  .my-form button {
+    font-weight: bold;
+  }
+  
+  .my-form button > * {
+    display: inline-block;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .my-form button .back {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-110%, -50%);
+  }
+  
+  .my-form button:enabled:hover .back,
+  .my-form button:focus .back {
+    transform: translate(-50%, -50%);
+  }
+  
+  .my-form button:enabled:hover .front,
+  .my-form button:focus .front {
+    transform: translateX(110%);
+  }
+  
+  
+  /* CUSTOM CHECKBOX
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .my-form input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  .my-form input[type="checkbox"] + label {
+    position: relative;
+    display: inline-block;
+    padding-left: 2rem;
+    color: white;
+    transition: background 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+  }
+  
+  .my-form input[type="checkbox"] + label::before,
+  .my-form input[type="checkbox"] + label::after {
+    content: '';
+    position: absolute;
+  }
+  
+  .my-form input[type="checkbox"] + label::before {
+    left: 0;
+    top: 6px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--white);
+  }
+  
+  .my-form input[type="checkbox"]:checked + label::before {
+    background: var(--red);
+  }
+  
+  .my-form input[type="checkbox"]:checked + label::after {
+    left: 7px;
+    top: 7px;
+    width: 6px;
+    height: 14px;
+    border-bottom: 2px solid var(--white);
+    border-right: 2px solid var(--white);
+    transform: rotate(45deg);
+  }
+  
+  
+  /* FOOTER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #3F4F4F;
+    height: auto;
+    width: 100%;
+    padding-top: 30px;
+    color: #3F4F4F;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    line-height: 3rem;
+    color: #07F1F1;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 25px;
+    font-size: 16px;
+    color: white;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0rem 1rem 0rem;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid #07F1F1;
+    padding: 5px;
+
+    border-radius: 50%;
+
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+    transition: color .4s ease;
+}
+.socials a:hover i{
+    color: #07F1F1;
+}
+
+.footer-bottom{
+    background: #07F1F1;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    text-align: center;
+}
+.footer-bottom p{
+    float: left;
+    font-size: 16px;
+    word-spacing: 10px;
+    text-transform: capitalize;
+    padding-left: 30px;
+}
+.footer-bottom p a{
+  color:#3F4F4F;
+  text-decoration:none;
+}
+.footer-bottom p a:hover{
+    color: white;
+  }
+  
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+.footer-menu{
+  float: right;
+
+}
+.footer-menu ul{
+  display: flex;
+}
+.footer-menu ul li{
+padding-right: 30px;
+display: block;
+}
+.footer-menu ul li a{
+  color: #3F4F4F;
+  text-decoration: none;
+}
+.footer-menu ul li a:hover{
+  color: white;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------ */
+
+
+/*responsive indicado en el apartado about*/
+
+@media (max-width: 768px) {
+    .about {
+        grid-template-areas: 'left' 'right';
+        padding: 1em 1em;
+    }
+    .about .left,
+    .about .right,
+    {
+        width: 100%;
+    }
+}
+
+/*responsive indicado para los elementos del form del contact me*/
+
+@media screen and (min-width: 768px) {
+    .my-form .grid {
+      display: grid;
+      grid-gap: 1.5rem;
+    }
+  
+    .my-form .grid-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .my-form .grid-3 {
+      grid-template-columns: auto auto auto;
+      align-items: center;
+    }
+  
+    .my-form .grid > *:not(:last-child) {
+      margin-bottom: 0;
+    }
+  
+    .my-form .required-msg {
+      display: block;
+    }
+  }
+
+  /*responsive indicado para los elementos del footer de contact me*/
+
+  @media screen and (min-width: 541px) {
+    .my-form input[type="checkbox"] + label::before {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .my-form input[type="checkbox"]:checked + label::after {
+      top: 3px;
+    }
+  }
+
+
+  @media (max-width:500px) {
+    .footer-menu ul{
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    }
+
+
+/*efecto de animacion css del panel con barras de progreso lineal*/
+
+#html-menu {
+    animation: html-barra 2s forwards;
+}
+
+@keyframes html-barra {
+    100% {
+        width: 90%;
+    }
+}
+
+#css-menu {
+    animation: css-barra 2s forwards;
+}
+
+@keyframes css-barra {
+    100% {
+        width: 75%;
+    }
+}
+
+#js-menu {
+    animation: js-barra 2s forwards;
+}
+
+@keyframes js-barra {
+    100% {
+        width: 60%;
+    }
+}
+
+#angular-menu {
+    animation: angular-barra 2s forwards;
+}
+
+@keyframes angular-barra {
+    100% {
+        width: 30%;
+    }
+}
+
+#spanish-menu {
+  animation: spanish-barra 2s forwards;
+}
+
+@keyframes spanish-barra {
+  100% {
+      width: 100%;
+  }
+}
+
+#english-menu {
+  animation: english-barra 2s forwards;
+}
+
+@keyframes english-barra {
+  100% {
+      width: 50%;
+  }
+}
+
+#portuguese-menu {
+  animation: portuguese-barra 2s forwards;
+}
+
+@keyframes portuguese-barra {
+  100% {
+      width: 25%;
+  }
+}
+
+#italian-menu {
+  animation: italian-barra 2s forwards;
+}
+
+@keyframes italian-barra {
+  100% {
+      width: 25%;
+  }
+}
+
+/* el avance de la barra dinamica se obtiene con la siguiente operación 472-472x0.65 (el 472 es del stroke-dasharray and dsahoffset*/
+@keyframes anim65{
+    100%{
+        stroke-dashoffset: 165;
+    }
+}
+@keyframes anim50{
+    100%{
+        stroke-dashoffset: 255;
+    }
+}
+@keyframes anim35{
+    100%{
+        stroke-dashoffset: 310;
+    }
+}
+
+/*efecto de animacion css del apartado contact me*/
+
+
+
+
